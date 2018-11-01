@@ -1,30 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <calcMatrix.c>
 
-#define ROWS 3
-#define COLS 3
-	
+#define NUM 5
 
 int main(void) {
 	
-	int A[ROWS][COLS]={
-		{2, 3, 0},
-		{8, 9, 1},
-		{7, 0, 5}
-	};
+//1. 변수 선언 
+	int A[NUM]; // 배열을 저장하는 변수
+	int i; // 입력값 변수 
 	
-	int B[ROWS][COLS]={
-		{1, 0, 0},
-		{0, 1, 0},
-		{0, 0, 1}
-	};	
+//2. 입력값 받기 
+	printf("input %i numbers : ", NUM); 
+	for(i=0;i<NUM;i++){
+		scanf("%d ", &A[i]);
+	}
+
+//3. sorting
 	
-	int C[ROWS][COLS];
-	
-	addMatrix(A,B,C);
-	printMatrix(C);
-	
+
+//4. 출력
+ 	printf("sorted numbers are : ");
+	 for(i=0;i<NUM;i++){
+ 		printf("%d ", A[i]);
+	}
 	return 0;
 }
-
